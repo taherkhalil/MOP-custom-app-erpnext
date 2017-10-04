@@ -13,7 +13,7 @@ def on_submit(doc, method):
 		if not mop.extra_charges_rate:
 			continue
 
-		charges = row.amount * mop.extra_charges_rate / 100.0
+		charges = float(row.amount) * float(mop.extra_charges_rate) / 100.0
 
 		#create Journal entry
 
