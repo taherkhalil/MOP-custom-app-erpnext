@@ -7,9 +7,9 @@ def on_submit(doc, method):
 	acc = "Knet/visa payment expenses - AT"
 	print(doc.payments, doc, method)
 	for row in doc.payments:
-		print(row.mode_of_payment)
+		print(row.mode_of_payment)	
 		mop = frappe.get_doc("Mode of Payment", row.mode_of_payment)
-	
+		print "INFO dialog closed" 
 		if not mop.extra_charges_rate:
 			continue
 
@@ -37,3 +37,4 @@ def on_submit(doc, method):
 
 		je.insert(ignore_permissions=True)
 		je.submit()
+		

@@ -81,6 +81,9 @@ app_license = "MIT"
 doc_events = {
  	"Sales Invoice": {
  		"on_submit": "mop.customization.custom_salesinvoice.on_submit"
+ 	},
+ 	"Payment Entry": {
+ 		"on_submit": "mop.customization.custom_paymententry.on_submit"
  	}
 }
 
