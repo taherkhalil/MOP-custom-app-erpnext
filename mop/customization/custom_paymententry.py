@@ -15,7 +15,7 @@ def on_submit(doc, method):
 	je = frappe.new_doc("Journal Entry")
 	je.posting_date = getdate()
 	je.company = doc.company
-	je.reference_name = doc.name
+	je.bill_no = doc.name
 	je.reference_date = getdate()	
 	row1 = je.append("accounts", {})	
 	row1.account = acc 	
