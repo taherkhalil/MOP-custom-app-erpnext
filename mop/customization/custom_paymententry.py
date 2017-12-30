@@ -15,7 +15,7 @@ def on_submit(doc, method):
 	je = frappe.new_doc("Journal Entry")
 	je.posting_date = getdate()
 	je.company = doc.company
-	je.user_remark = "inv:" + doc.name + "   mode: " + row.mode_of_payment
+	je.user_remark = "inv:" + doc.name + "   mode: " + doc.mode_of_payment
 	je.reference_date = getdate()	
 	row1 = je.append("accounts", {})	
 	row1.account = acc 	
