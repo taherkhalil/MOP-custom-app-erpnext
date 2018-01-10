@@ -20,7 +20,7 @@ def on_submit(doc, method):
 			je.posting_date = getdate()
 			je.company = doc.company
 			# je.cheque_no = doc.name
-			je.user_remark = ["inv:",doc.name,",   mode: ",row.mode_of_payment]
+			je.user_remark = "inv:" + doc.name + "   mode: " + doc.mode_of_payment
 			je.reference_date = getdate()
 			row1 = je.append("accounts", {})
 			row1.account = acc 
